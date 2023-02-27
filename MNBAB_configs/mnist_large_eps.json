@@ -1,0 +1,65 @@
+{
+  "network_path": "./models/SP1_E_mnist_0_3_best_dict.pynet",
+  "input_dim": [
+    1,
+    28,
+    28
+  ],
+  "normalization_means": [
+    0.0
+  ],
+  "normalization_stds": [
+    1.0
+  ],
+  "test_data_path": "test_data/mnist_test_full.csv",
+  "eps": 0.3,
+  "use_gpu": true,
+  "optimize_alpha": true,
+  "alpha_lr": 0.1,
+  "alpha_opt_iterations": 20,
+  "optimize_prima": true,
+  "prima_lr": 0.01,
+  "prima_opt_iterations": 20,
+  "prima_hyperparameters": {
+    "sparse_n": 50,
+    "K": 3,
+    "s": 1,
+    "num_proc_to_compute_constraints": 2,
+    "max_number_of_parallel_input_constraint_queries": 1000,
+    "max_unstable_nodes_considered_per_layer": 1000,
+    "min_relu_transformer_area_to_be_considered": 0.2,
+    "fraction_of_constraints_to_keep": 1.0
+  },
+  "branching": {
+    "method": "babsr",
+    "use_prima_contributions": false,
+    "use_optimized_slopes": false,
+    "use_beta_contributions": false,
+    "propagation_effect_mode": "bias",
+    "use_indirect_effect": false,
+    "reduce_op": "geo_mean",
+    "use_abs": true,
+    "use_cost_adjusted_scores": false
+  },
+  "peak_lr_scaling_factor": 2.0,
+  "final_lr_div_factor": 10.0,
+  "beta_lr": 0.05,
+  "bab_batch_sizes": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+  ],
+  "recompute_intermediate_bounds_after_branching": false,
+  "use_dependence_sets": true,
+  "use_early_termination": true,
+  "random_seed": 0,
+  "timeout": 500,
+  "experiment_name": "mnist_conv_big",
+  "use_online_logging": false,
+  "comet_api_key": "-",
+  "comet_project_name": "-",
+  "comet_workspace": "-"
+}

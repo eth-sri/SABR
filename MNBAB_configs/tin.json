@@ -1,0 +1,74 @@
+{
+  "network_path": "./networks/SP1_E_tinyimagenet_2022_09_20-05_39_15_PM_dict.pynet",
+  "input_dim": [
+    3,
+    56,
+    56
+  ],
+  "normalization_means": [
+    0.4802,
+    0.4481,
+    0.3975
+  ],
+  "normalization_stds": [
+    0.2302,
+    0.2265,
+    0.2262
+  ],
+  "test_data_path": "data/tin_val.csv",
+  "eps": 0.00392157,
+  "use_gpu": true,
+  "optimize_alpha": true,
+  "alpha_lr": 0.12,
+  "alpha_opt_iterations": 40,
+  "bab_opt_iterations": 20,
+  "optimize_prima": false,
+  "prima_lr": 0.01,
+  "prima_opt_iterations": 20,
+  "prima_hyperparameters": {
+    "sparse_n": 50,
+    "K": 3,
+    "s": 1,
+    "num_proc_to_compute_constraints": 2,
+    "max_number_of_parallel_input_constraint_queries": 1000,
+    "max_unstable_nodes_considered_per_layer": 500,
+    "min_relu_transformer_area_to_be_considered": 0.01,
+    "fraction_of_constraints_to_keep": 1.0
+  },
+  "run_BaB": true,
+  "dtype": "float32",
+  "box_pass": true,
+  "branching": {
+    "method": "babsr",
+    "use_prima_contributions": false,
+    "use_optimized_slopes": false,
+    "use_beta_contributions": false,
+    "propagation_effect_mode": "bias",
+    "use_indirect_effect": false,
+    "reduce_op": "geo_mean",
+    "use_abs": true,
+    "use_cost_adjusted_scores": false
+  },
+  "peak_lr_scaling_factor": 2.0,
+  "final_lr_div_factor": 10.0,
+  "beta_lr": 0.05,
+  "bab_batch_sizes": [
+    32,
+    32,
+    32,
+    32,
+    32,
+    32
+  ],
+  "recompute_intermediate_bounds_after_branching": false,
+  "intermediate_bounds_method": "dp",
+  "use_dependence_sets": true,
+  "use_early_termination": true,
+  "random_seed": 0,
+  "timeout": 100,
+  "experiment_name": "TinyImageNet",
+  "use_online_logging": false,
+  "comet_api_key": "-",
+  "comet_project_name": "-",
+  "comet_workspace": "-"
+}
