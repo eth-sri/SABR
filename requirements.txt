@@ -9,8 +9,5 @@ scipy==1.9.1
 tensorboard==2.8.0
 tensorboard-data-server
 tensorboard-plugin-wit
-torch==1.11.0
-torchaudio
-torchvision
 tqdm==4.64.0
 chardet
