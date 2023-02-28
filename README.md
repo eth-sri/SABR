@@ -121,4 +121,4 @@ License and Copyright
 ---------------------
 
 * Copyright (c) 2023 [Secure, Reliable, and Intelligent Systems Lab (SRI), Department of Computer Science ETH Zurich](https://www.sri.inf.ethz.ch/)
-* Licensed under the [Apache License](https://www.apache.org/licenses/LICENSE-2.0)
+* Licensed under the [MIT License](LICENCE)
