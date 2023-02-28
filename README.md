@@ -1,3 +1,11 @@
+SABR <img width="100" alt="portfolio_view" align="right" src="http://safeai.ethz.ch/img/sri-logo.svg">
+======== 
+[SABR](https://openreview.net/forum?id=7oFuxtJtUMH) (Small Adversarial Bounding Boxes), is a novel certified training method, 
+based on reducing the regularization induced by training with imprecise bound propagation methods (IBP) by only propagating 
+small but carefully selected sub-regions of the adversarial input specification. It is enabled by recent precise neural-
+network verification methods such as [MN-BaB](https://www.sri.inf.ethz.ch/publications/ferrari2022complete).
+
+
 ### Setup
 Create and activate a conda environment
 ```
@@ -22,11 +30,11 @@ bash tinyimagenet_download.sh
 
 Please use the following links to download our trained models:
 
-[Mnist 0.1](https://files.sri.inf.ethz.ch/sabr/SABR_mnist_01_best.pynet)
-[Mnist 0.3](https://files.sri.inf.ethz.ch/sabr/SABR_mnist_01_best.pynet)
-[Cifar10 2/255](https://files.sri.inf.ethz.ch/sabr/SABR_cifar10_2_best.pynet)
-[Cifar10 8/255](https://files.sri.inf.ethz.ch/sabr/SABR_cifar10_8_best.pynet)
-[TinyImageNet 1/255](https://files.sri.inf.ethz.ch/sabr/SABR_TIN_1_best.pynet)
+[Mnist 0.1](https://files.sri.inf.ethz.ch/sabr/SABR_mnist_01_best.pynet)  
+[Mnist 0.3](https://files.sri.inf.ethz.ch/sabr/SABR_mnist_01_best.pynet)  
+[Cifar10 2/255](https://files.sri.inf.ethz.ch/sabr/SABR_cifar10_2_best.pynet)  
+[Cifar10 8/255](https://files.sri.inf.ethz.ch/sabr/SABR_cifar10_8_best.pynet)  
+[TinyImageNet 1/255](https://files.sri.inf.ethz.ch/sabr/SABR_TIN_1_best.pynet)  
 
 ### Training with SABR
 To reproduce our main results (Table 1), train the models by executing the following commands from the top level directory.
@@ -78,7 +86,8 @@ python src/main.py --box_attack pgd_concrete  --net CNN7 --bn --bn2 --lr 0.0005 
 
 ### Certification
 We use MN-BaB for certification:  
-Follow the the installation instructions here:
+Follow the the installation instructions here (use the `SABR_ready` branch):  
+[github.com/eth-sri/mn-bab/tree/SABR_ready](https://github.com/eth-sri/mn-bab/tree/SABR_ready)
 
 The final models are automatically converted to an MN-BaB compatible format. To convert intermediate models, use the following command:
 ```
@@ -91,3 +100,25 @@ To run the actual certification use the following command with the chosen config
 ```
 python src/verify.py -c configs/cifar10_small_eps.json
 ```
+
+Citing This Work
+----------------------
+
+If you find this work useful for your research, please cite it as:
+
+```
+@inproceedings{
+    mueller2023certified,
+    title={Certified Training: Small Boxes are All You Need},
+    author={Mark Niklas Mueller and Franziska Eckert and Marc Fischer and Martin Vechev},
+    booktitle={International Conference on Learning Representations},
+    year={2023},
+    url={https://openreview.net/forum?id=7oFuxtJtUMH}
+}
+```
+
+License and Copyright
+---------------------
+
+* Copyright (c) 2023 [Secure, Reliable, and Intelligent Systems Lab (SRI), Department of Computer Science ETH Zurich](https://www.sri.inf.ethz.ch/)
+* Licensed under the [Apache License](https://www.apache.org/licenses/LICENSE-2.0)
