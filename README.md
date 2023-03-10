@@ -110,7 +110,7 @@ If you find this work useful for your research, please cite it as:
 @inproceedings{
     mueller2023certified,
     title={Certified Training: Small Boxes are All You Need},
-    author={Mark Niklas Mueller and Franziska Eckert and Marc Fischer and Martin Vechev},
+    author={Mark Niklas M{\"{u}}ller and Franziska Eckert and Marc Fischer and Martin Vechev},
     booktitle={International Conference on Learning Representations},
     year={2023},
     url={https://openreview.net/forum?id=7oFuxtJtUMH}
