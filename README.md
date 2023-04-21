@@ -31,7 +31,7 @@ bash tinyimagenet_download.sh
 Please use the following links to download our trained models:
 
 [Mnist 0.1](https://files.sri.inf.ethz.ch/sabr/SABR_mnist_01_best.pynet)  
-[Mnist 0.3](https://files.sri.inf.ethz.ch/sabr/SABR_mnist_01_best.pynet)  
+[Mnist 0.3](https://files.sri.inf.ethz.ch/sabr/SABR_mnist_03_best.pynet)  
 [Cifar10 2/255](https://files.sri.inf.ethz.ch/sabr/SABR_cifar10_2_best.pynet)  
 [Cifar10 8/255](https://files.sri.inf.ethz.ch/sabr/SABR_cifar10_8_best.pynet)  
 [TinyImageNet 1/255](https://files.sri.inf.ethz.ch/sabr/SABR_TIN_1_best.pynet)  
